@@ -1,21 +1,25 @@
 import psycopg2
 import os
 
-MYSQL_URL = os.environ.get("MYSQL_URL")
+DATABASE_URL = os.environ.get("MYSQL_URL")
 
-conn = mysql.connector.connect(MYSQL_URL)
+conn = psycopg2.connect(DATABASE_URL)
 cursor = conn.cursor()
+
+# Creare tabel users
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
     password_hash VARCHAR(200) NOT NULL
 );
 """)
+
+# Creare tabel messages
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS messages (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
     message TEXT,
     response TEXT,
@@ -23,6 +27,7 @@ CREATE TABLE IF NOT EXISTS messages (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 """)
+
 conn.commit()
 cursor.close()
 conn.close()

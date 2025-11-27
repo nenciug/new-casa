@@ -6,6 +6,7 @@ from chat import router as chat_router
 import db_init
 
 app = FastAPI(title="CasaSmart AI Backend")
+
 app.include_router(register_router, prefix="/api")
 app.include_router(login_router, prefix="/api")
 app.include_router(recommend_router, prefix="/api")

@@ -1,4 +1,4 @@
-import mysql.connector
+import psycopg2
 import os
 
 MYSQL_URL = os.environ.get("MYSQL_URL")

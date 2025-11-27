@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produse - Casa Ta Inteligentă</title>
+<link rel="icon" href="nenciug.webp" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Casa Ta Inteligentă",
+  "url": "https://nenciug.github.io/casa-smart/index.html",
+  "logo": "https://nenciug.github.io/casa-smart/apple-touch-icon.png",
+  "sameAs": [
+    "https://facebook.com/pagina-facebook",
+    "https://instagram.com/pagina-instagram"
+  ]
+}
+</script>
+
+<style>
+body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+header { text-align:center; position:relative; }
+header .logo-container { width:100%; height:300px; overflow:hidden; }
+header .logo-container img { width:100%; height:100%; object-fit:cover; }
+header .slogan { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); font-size:1.4em; color:white; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
+nav { background:#222; position:sticky; top:0; z-index:1000; }
+nav ul { display:flex; justify-content:center; flex-wrap:wrap; list-style:none; margin:0; padding:0; }
+nav ul li a { display:block; padding:15px 20px; color:white; text-decoration:none; font-weight:bold; }
+nav ul li a:hover { background:#444; }
+section { padding:40px 20px; max-width:1200px; margin:auto; }
+section h3 { text-align:center; margin-bottom:20px; font-size:1.8em; color:#222; }
+section p { text-align:center; font-size:1em; max-width:800px; margin:0 auto 40px; }
+.product-container { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:25px; }
+.product-item { background:white; padding:20px; border-radius:10px; box-shadow:0 6px 15px rgba(0,0,0,0.1); text-align:center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.product-item:hover { transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+.product-image { width:100%; height:200px; object-fit:contain; border-radius:5px; }
+.product-info h5 { font-size:1.2em; color:#111; margin:15px 0 10px; }
+.product-info p { font-size:0.95em; color:#666; margin-bottom:10px; }
+.product-price { font-size:1.1em; color:#28a745; font-weight:bold; }
+.recommendations-section, .chat-section { text-align:center; margin-bottom:50px; }
+.recommendations-section input, .recommendations-section button, .chat-section input, .chat-section button { padding:10px 15px; font-size:1em; margin:5px; border-radius:5px; border:1px solid #ccc; }
+.recommendations-section button, .chat-section button { background:#28a745; color:white; border:none; cursor:pointer; }
+.recommendations-section button:hover, .chat-section button:hover { background:#218838; }
+#recommendationsContainer, #chatContainer { text-align:left; max-width:700px; margin:10px auto; }
+#recommendationsContainer p, #chatContainer p { background:#fff; padding:10px; border-radius:5px; margin:5px 0; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+footer { background:#222; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
+footer a { color:white; text-decoration:underline; }
+@media (max-width:768px){ nav ul { flex-direction:column; } nav ul li a { padding:12px 15px; font-size:0.95em; } header .slogan { font-size:1.2em; } .product-image { height:180px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="12.jpg" alt="Casa Ta Inteligentă">
+    </div>
+    <h2 class="slogan">Automatizarea casei tale, simplu și inteligent!</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="produse.html">Produse</a></li>
+            <li><a href="info.html">Informații utile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="recommendations-section">
+    <h3>Obține recomandarea completă pentru casa ta</h3>
+    <p>Răspunde la câteva întrebări și vei primi lista de produse recomandate pentru nevoile tale.</p>
+    <input type="text" id="queryInput" placeholder="Ex: Am nevoie de iluminat și securitate pentru 3 camere">
+    <button id="askBtn">Primește recomandări</button>
+    <div id="recommendationsContainer"></div>
+</section>
+
+<section class="chat-section">
+    <h3>Chat cu AI Casa Inteligentă</h3>
+    <input type="text" id="chatInput" placeholder="Scrie întrebarea ta...">
+    <button id="chatBtn">Trimite</button>
+    <div id="chatContainer"></div>
+</section>
+
+<section>
+    <h3>Produsele noastre</h3>
+    <p>Oferim soluții complete pentru automatizarea casei tale: iluminat inteligent, termostate, sisteme de securitate și multe altele, toate configurate pentru confortul tău.</p>
+    <div class="product-container">
+        <!-- Produse exemplu, toate ca în codul tău original -->
+        <div class="product-item"><img src="termostat.PNG" alt="Termostat inteligent" class="product-image"><div class="product-info"><h5>Termostat inteligent</h5><p>Menține temperatura și umiditatea ideale în locuința ta.</p><span class="product-price">550 RON</span></div></div>
+        <div class="product-item"><img src="poarta.PNG" alt="Automatizare poarta" class="product-image"><div class="product-info"><h5>Automatizare poarta</h5><p>Deschidere poarta cu telecomanda sau smartphone.</p><span class="product-price">1800 RON</span></div></div>
+        <div class="product-item"><img src="camere.PNG" alt="Sistem de securitate video" class="product-image"><div class="product-info"><h5>Sistem de securitate video</h5><p>Supraveghere cu camere și alertă în timp real.</p><span class="product-price">1,200 RON</span></div></div>
+        <div class="product-item"><img src="priza.PNG" alt="Priză inteligentă Wi-Fi" class="product-image"><div class="product-info"><h5>Priză inteligentă Wi-Fi</h5><p>Controlează dispozitivele de la distanță și economisește energie.</p><span class="product-price">200 RON</span></div></div>
+  <div class="product-item">
+                <img src="smarthub.PNG" alt="Smart Hub" class="product-image">
+                <div class="product-info">
+                    <h5>Smart Hub pentru automatizarea electrocasnicelor (montaj inclus)</h5>
+                    <p>Un hub pentru integrarea și automatizarea electrocasnicelor tale.</p>
+                    <span class="product-price">100 RON</span>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="aspirator.PNG" alt="Robot aspirator" class="product-image">
+                <div class="product-info">
+                    <h5>Robot aspirator inteligent (configurare și integrare în sistem)</h5>
+                    <p>Un robot aspirator care poate fi controlat prin aplicație sau voce pentru curățenie automată.</p>
+                    <span class="product-price">2,500 RON</span>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="alexa.PNG" alt="Dispozitiv de control vocal" class="product-image">
+                <div class="product-info">
+                    <h5>Dispozitiv de control vocal (compatibil Alexa/Google Home)</h5>
+                    <p>Controlează toate dispozitivele tale inteligente prin comenzi vocale cu Alexa sau Google Home.</p>
+                    <span class="product-price">350 RON</span>
+                </div>
+            </div>
+
+            <div class="product-item">
+    <img src="senzor temp.PNG" alt="Senzor inteligent de temperatură și umiditate" class="product-image">
+    <div class="product-info">
+        <h5>Senzor inteligent de temperatură și umiditate (instalare și integrare)</h5>
+        <p>Monitorizează temperatura și umiditatea din locuința ta și trimite notificări pe telefon.</p>
+        <span class="product-price">150 RON</span>
+    </div>
+</div>
+
+<div class="product-item">
+    <img src="releu.PNG" alt="Releu Smart" class="product-image">
+    <div class="product-info">
+        <h5>Releu Smart (montaj și configurare)</h5>
+        <p>Controleaza orice dispozitiv eletronic conectat la acest dispozitiv.</p>
+        <span class="product-price">100 RON</span>
+    </div>
+</div>
+
+            <div class="product-item">
+    <img src="camera 360.PNG" alt="Cameră Wi-Fi Rotativă" class="product-image">
+    <div class="product-info">
+        <h5>Cameră Wi-Fi Rotativă (montaj și configurare)</h5>
+        <p>Cameră Wi-Fi Rotativă – Supraveghere inteligentă 360° cu control de la distanță, calitate video HD, vedere nocturnă și detectare a mișcării. Ideală pentru siguranța casei tale!</p>
+        <span class="product-price">250 RON</span>
+    </div>
+</div>
+
+<div class="product-item">
+    <img src="senz inundatie.PNG" alt="Senzor de inundație Wi-Fi" class="product-image">
+    <div class="product-info">
+        <h5>Senzor de inundație Wi-Fi (montaj și configurare)</h5>
+        <p>Detectează scurgerile de apă și te avertizează imediat prin aplicație.</p>
+        <span class="product-price">150 RON</span>
+    </div>
+</div>
+
+<div class="product-item">
+    <img src="enzor fum.PNG" alt="Senzor de fum inteligent" class="product-image">
+    <div class="product-info">
+        <h5>Senzor de fum inteligent (montaj și conectare la aplicație)</h5>
+        <p>Detectează fumul și trimite alerte instantanee pe telefonul tău.</p>
+        <span class="product-price">200 RON</span>
+    </div>
+</div>
+
+<div class="product-item">
+    <img src="gaz.PNG" alt="Senzor de gaz inteligent" class="product-image">
+    <div class="product-info">
+        <h5>Senzor de gaz inteligent (instalare și configurare)</h5>
+        <p>Monitorizează scurgerile de gaz și trimite notificări în timp real.</p>
+        <span class="product-price">150 RON</span>
+    </div>
+</div>
+
+<div class="product-item">
+    <img src="senz usa.PNG" alt="Senzor pentru uși/geamuri" class="product-image">
+    <div class="product-info">
+        <h5>Senzor pentru uși/geamuri (montaj inclus)</h5>
+        <p>Detectează deschiderea ușilor sau a ferestrelor și trimite alerte rapide.</p>
+        <span class="product-price">100 RON/buc</span>
+    </div>
+</div>
+
+<div class="product-item">
+    <img src="bariera.PNG" alt="Barieră IR (infraroșu)" class="product-image">
+    <div class="product-info">
+        <h5>Barieră IR (infraroșu) (montaj și configurare)</h5>
+        <p>Oferă protecție perimetrală detectând orice mișcare în spațiul desemnat.</p>
+        <span class="product-price">600 RON</span>
+    </div>
+</div>
+            <div class="product-item">
+                <img src="zvave.PNG" alt="Hub de automatizare Z-Wave" class="product-image">
+                <div class="product-info">
+                    <h5>Hub de automatizare Z-Wave (montaj și configurare)</h5>
+                    <p>Integrați toate dispozitivele smart într-un singur hub de automatizare Z-Wave.</p>
+                    <span class="product-price">850 RON</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Casa Ta Inteligentă. Toate drepturile rezervate.</p>
+    <p><a href="politica_privacy.html">Politica de confidențialitate</a></p>
+</footer>
+
+<script>
+const API_BASE = "https://a-ten-kappa-21.vercel.app/";
+
+// Recomandări AI
+async function getRecommendations() {
+    const query = document.getElementById("queryInput").value.trim();
+    const container = document.getElementById("recommendationsContainer");
+    if(!query){ container.innerHTML = "<p>Introduceți câteva detalii pentru recomandări.</p>"; return; }
+    container.innerHTML = "<p>Se generează recomandările...</p>";
+    try {
+        const response = await fetch(`${API_BASE}/recommend`, {
+            method:"POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({ query })
+        });
+        if(!response.ok) throw new Error(`Eroare server: ${response.status}`);
+        const data = await response.json();
+        container.innerHTML = "";
+        if(data.recommendations && data.recommendations.length){
+            data.recommendations.forEach(item => {
+                const p = document.createElement("p");
+                p.textContent = item;
+                container.appendChild(p);
+            });
+        } else {
+            container.innerHTML = "<p>Nu s-au găsit recomandări pentru criteriile tale.</p>";
+        }
+    } catch(err){
+        console.error(err);
+        container.innerHTML = "<p>Eroare la server. Încearcă mai târziu.</p>";
+    }
+}
+document.getElementById("askBtn").addEventListener("click", getRecommendations);
+
+// Chat AI
+document.getElementById("chatBtn").addEventListener("click", async () => {
+    const question = document.getElementById("chatInput").value.trim();
+    const container = document.getElementById("chatContainer");
+    if(!question){ container.innerHTML = "<p>Scrie o întrebare.</p>"; return; }
+
+    const pUser = document.createElement("p");
+    pUser.textContent = `Întrebare: ${question}`;
+    container.appendChild(pUser);
+
+    const pLoading = document.createElement("p");
+    pLoading.textContent = "AI răspunde...";
+    container.appendChild(pLoading);
+
+    try {
+        const res = await fetch(`${API_BASE}/chat`, {
+            method:"POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({ question })
+        });
+        const data = await res.json();
+        pLoading.textContent = `Răspuns AI: ${data.answer}`;
+    } catch(err){
+        pLoading.textContent = "Eroare la server. Încearcă mai târziu.";
+    }
+    document.getElementById("chatInput").value = "";
+});
+</script>
+
+</body>
+</html>
